@@ -9,7 +9,7 @@ void setup()
   smooth();
   colorMode(HSB, 255, 100, 100);
   strokeWeight(2);
-  port = new Serial(this, "COM16", 9600);
+  port = new Serial(this, "COM13", 9600);
 }
 
 void draw()
@@ -36,9 +36,9 @@ void draw()
         previous = history.get(sampleIndex-1);
         current = history.get(sampleIndex);
         currentX = width - 80 - ((millis() - current.getTime()) / 100);
-        currentY = height - (current.getValue() * 2);
+        currentY = height - (current.getValue() * 5);
         previousX = width - 80 - ((millis() - previous.getTime()) / 100);
-        previousY = height - (previous.getValue() * 2);
+        previousY = height - (previous.getValue() * 5);
         // If the calculated position of the current is off the screen, mark previous for removal
         if(currentX < 0) previous.markForRemoval();
         line(previousX, previousY, currentX, currentY);

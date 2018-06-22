@@ -37,8 +37,8 @@ void draw()
   for (int x = 0; x<cameraWidth; x++) {
     for (int y = 0; y<cameraHeight; y++) {
       pixel = get(x, y);
-      if ((hue(pixel)>330) || (hue(pixel)<30)) {
-        if ((saturation(pixel)>60) && (brightness(pixel)>70)) {
+      if ((hue(pixel)>350) || (hue(pixel)<10)) {
+        if ((saturation(pixel)>50) && (brightness(pixel)>50)) {
           set(x,y,color(255,255,255));
           totalX = totalX + x;
           totalY = totalY + y;

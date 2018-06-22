@@ -7,13 +7,13 @@ float offset = 0.0;
 
 void setup()
 {
-//  size(700,700);
+  size(700,700);
   // data = loadStrings(URL);
   data = loadStrings("ace-swepam.txt");
   noStroke();
   colorMode(HSB, 360, 100, 100);
-  KetaiSensor sensor = new KetaiSensor(this);
-  sensor.start();
+//  KetaiSensor sensor = new KetaiSensor(this);
+//  sensor.start();
 }
 
 void draw()
